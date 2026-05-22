@@ -1,0 +1,77 @@
+<Project>
+  <!-- Central Package Management (CPM) dla .NET 10 -->
+  <!-- Umożliwia centralne zarządzanie wersjami wszystkich pakietów NuGet -->
+
+  <PropertyGroup>
+	<!-- Włącz Central Package Management -->
+	<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+
+	<!-- .NET 10 target framework -->
+	<TargetFramework>net10.0</TargetFramework>
+	<LangVersion>latest</LangVersion>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<!-- Microsoft.Extensions packages -->
+	<PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Logging" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.0" />
+
+	<!-- Entity Framework Core -->
+	<PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.EntityFrameworkCore.Proxies" Version="10.0.0" />
+
+	<!-- ASP.NET Core (jeśli potrzebne) -->
+	<PackageVersion Include="Microsoft.AspNetCore.Mvc" Version="10.0.0" />
+	<PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+
+	<!-- Testing -->
+	<PackageVersion Include="xunit" Version="2.9.3" />
+	<PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+	<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+	<PackageVersion Include="Moq" Version="4.20.70" />
+	<PackageVersion Include="FluentAssertions" Version="6.12.1" />
+	<PackageVersion Include="AutoFixture" Version="4.18.1" />
+	<PackageVersion Include="NSubstitute" Version="5.3.0" />
+	<PackageVersion Include="BenchmarkDotNet" Version="0.15.2" />
+	<PackageVersion Include="Microsoft.VisualStudio.DiagnosticsHub.BenchmarkDotNetDiagnosers" Version="18.3.36812.1" />
+
+	<!-- JSON serialization -->
+	<PackageVersion Include="System.Text.Json" Version="10.0.0" />
+	<PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+
+	<!-- Validation -->
+	<PackageVersion Include="FluentValidation" Version="11.11.0" />
+	<PackageVersion Include="DataAnnotations.Localization" Version="5.0.0" />
+
+	<!-- Mapping -->
+	<PackageVersion Include="AutoMapper" Version="13.0.1" />
+	<PackageVersion Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+
+	<!-- Logging & Monitoring -->
+	<PackageVersion Include="Serilog" Version="4.2.0" />
+	<PackageVersion Include="Serilog.Extensions.Logging" Version="9.0.1" />
+	<PackageVersion Include="Serilog.Sinks.Console" Version="6.1.1" />
+	<PackageVersion Include="Serilog.Sinks.File" Version="6.0.0" />
+
+	<!-- Utilities -->
+	<PackageVersion Include="LanguageExt.Core" Version="4.4.49" />
+
+	<!-- Code Quality -->
+	<PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
+	<PackageVersion Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.0" />
+  </ItemGroup>
+
+  <!-- Definicje dla różnych typów projektów -->
+  <PropertyGroup Condition="'$(MSBuildProjectName)' != '' and $(MSBuildProjectName.EndsWith('.Tests'))">
+	<IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+</Project>
