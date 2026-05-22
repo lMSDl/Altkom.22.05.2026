@@ -1,35 +1,4 @@
-﻿
-//funkcja wygenerowana na podstawie nagłówka funkcji
-using ConsoleApp;
-
-int Sum(float a, float b) => (int)(a + b);
-
-
-//substract two float numbers and return integer, use block body syntax
-int Subtract(float a, float b)
-{
-    return (int)(a - b);
-}
-
-//multiply two numbers
-float Multiply(float a, float b)
-{
-    return (a * b);
-}
-
-//pierwotnie wygenerowana funkcja Sum została zmodyfikowana przez użytkownika
-//co spwodowało, że model dostosował kolejny generowany kod (Multiply) do zmian użytkownika
-//kontenst "nauki" copilot jest ograniczony do bieżącej sesji - np. wyłączenie IDE powoduje utratę pamięci "nauki"
-
-//dzielenie dwóch liczb
-float Divide(float a, float b) 
-{
-    if (b == 0)
-    {
-        throw new DivideByZeroException("Nie można dzielić przez zero.");
-    }
-    return a / b;
-}
+﻿using ConsoleApp;
 
 
 /*
@@ -53,12 +22,10 @@ Point3D CreatePoint(float[] tab)
 {
     if (tab.Length != 3)
     {
-        throw new ArgumentException("Tablica musi zawierać dokładnie 3 elementy.");
+        throw new ArgumentException("The array must contain exactly 3 elements.");
     }
     return new Point3D(tab[0], tab[1], tab[2]);
-}
-
-
+}   
 
 
 //funkcja generująca 10 produktów; użyj klasy Product
@@ -78,5 +45,10 @@ List<Product> GenerateProducts()
     }
     return products;
 }
+
+var sum = MathOperations.Sum(10, 5);
+var diff = MathOperations.Subtraction(10, 5);
+var product = MathOperations.Multiply(10, 5);
+var quotient = MathOperations.Divide(10, 5);
 
 
