@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ConsoleApp/ConsoleApp.csproj" />
+  <Project Path="Hangman.UnitTests/Hangman.UnitTests.csproj" Id="73da0403-0469-4c88-bf19-cf7791dd2e62" />
   <Project Path="Hangman/Hangman.csproj" />
   <Project Path="Models/Models.csproj" />
   <Project Path="WebApp/WebApp.csproj" Id="bc153155-d750-4ada-b4d5-d60d3f5fe00f" />
