@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xsd:element name="root" msdata:IsDataSet="true">
+	  <xsd:complexType>
+		<xsd:choice maxOccurs="unbounded">
+		  <xsd:element name="data">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+			  </xsd:sequence>
+			  <xsd:attribute name="name" type="xsd:string" />
+			</xsd:complexType>
+		  </xsd:element>
+		</xsd:choice>
+	  </xsd:complexType>
+	</xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter</value></resheader>
+
+  <data name="Word"><value>Word</value></data>
+  <data name="WrongAttempts"><value>Wrong attempts</value></data>
+  <data name="UsedLetters"><value>Used letters</value></data>
+  <data name="EnterLetter"><value>Enter a letter</value></data>
+  <data name="Win"><value>Great job! You won!</value></data>
+  <data name="TheWordWas"><value>The word was</value></data>
+  <data name="Loss"><value>Game over! You lost.</value></data>
+  <data name="InvalidInput"><value>Invalid input. Enter a single letter.</value></data>
+  <data name="AlreadyGuessed"><value>This letter has already been used.</value></data>
+  <data name="PlayAgain"><value>Play again? (y/n)</value></data>
+  <data name="PressEnter"><value>Press Enter to continue...</value></data>
+  <data name="ChooseLanguage"><value>Wybierz język / Choose language [pl/en]</value></data>
+  <data name="InvalidChoice"><value>Niepoprawny wybór / Invalid choice.</value></data>
+</root>
